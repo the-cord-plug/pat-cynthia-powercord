@@ -12,7 +12,7 @@ module.exports = class Template extends Plugin {
 
                 let res = await post("https://cynthia.rest/action/pat").execute();
                 x = true;
-                setTimeout(5000, ()=>x=false);
+                setTimeout(()=>{x=false}, 5000);
                 return {send: false, result: res.body.message}
             }
         })
