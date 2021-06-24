@@ -1,7 +1,7 @@
 const { Plugin } = require('powercord/entities');
 const { post } = require("powercord/http");
 let x = false;
-module.exports = class Template extends Plugin {
+module.exports = class PatCynthia extends Plugin {
     startPlugin() {
         powercord.api.commands.registerCommand({
             command: 'pat-cynthia',
