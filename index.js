@@ -26,7 +26,7 @@ module.exports = class PatCynthia extends Plugin {
 
                 let res = await post("https://cynthia.rest/action/hug").execute();
                 cantHugCynthia = true;
-                setTimeout(()=>{cantHugCynthia=false}, 5000);
+                setTimeout(()=>{cantHugCynthia=false}, 3600e3);
                 return {send: false, result: res.body.message}
             }
         })
