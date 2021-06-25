@@ -9,7 +9,7 @@ module.exports = class PatCynthia extends Plugin {
             description: 'pat cynthia!',
             usage: '{c}',
             executor: async () => {
-                if (x) {return {send:false, result:"you're being rate limited! (dont pat too fast! only once per 5 seconds)"}}
+                if (cantPatCynthia) {return {send:false, result:"you're being rate limited! (dont pat too fast! only once per 5 seconds)"}}
 
                 let res = await post("https://cynthia.rest/action/pat").execute();
                 cantPatCynthia = true;
@@ -22,7 +22,7 @@ module.exports = class PatCynthia extends Plugin {
             description: 'hug cynthia!',
             usage: '{c}',
             executor: async () => {
-                if (x) {return {send:false, result:"you're being rate limited! (dont hug too fast! only once per hour)"}}
+                if (cantHugCynthia) {return {send:false, result:"you're being rate limited! (dont hug too fast! only once per hour)"}}
 
                 let res = await post("https://cynthia.rest/action/hug").execute();
                 cantHugCynthia = true;
