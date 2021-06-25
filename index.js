@@ -15,7 +15,7 @@ module.exports = class PatCynthia extends Plugin {
                     cantPatCynthia = true;
                     setTimeout(() => { cantPatCynthia = false }, 5000);
                     return { send: false, result: res.body.message }
-                } catch { return { send: false, result: "Error! (You're likely being rate limited, dont hug too fast! (once per 5 seconds))" }; }
+                } catch { return { send: false, result: "Error! (You're likely being rate limited, dont pat too fast! (once per 5 seconds))" }; }
             }
         })
         powercord.api.commands.registerCommand({
